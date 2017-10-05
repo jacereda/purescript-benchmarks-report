@@ -4,15 +4,13 @@ import Prelude
 
 import Chart as Chart
 import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE, log, logShow)
+import Control.Monad.Eff.Console (CONSOLE, logShow)
 import DOM.HTML (window)
 import DOM.HTML.Location (search)
-import DOM.HTML.Window (document, location, url)
+import DOM.HTML.Window (location)
 import Data.Either (Either(..))
-import Data.Newtype (un)
 import Data.String (drop)
 import Global (decodeURIComponent)
-import Halogen (liftAff, liftEff)
 import Halogen.Aff (HalogenEffects, awaitBody, runHalogenAff)
 import Halogen.VDom.Driver (runUI)
 import Simple.JSON (readJSON)
